@@ -14,15 +14,15 @@ happyGif.style.display = "none";
 sadGif.style.display = "none";
 showMsg.style.display = "none";
 
-const calculateProfit = function (initialPrice, currentPrice) {
-  const profit = currentPrice - initialPrice;
-  const profitPercentage = (profit / initialStockPrice.value) * 100;
+const calculateProfit = function (costPrice, sellingPrice) {
+  const profit = sellingPrice - costPrice;
+  const profitPercentage = (profit / costPrice) * 100;
   return [profit, profitPercentage];
 };
 
-const calculateLoss = function (initialPrice, currentPrice) {
-  const loss = initialPrice - currentPrice;
-  const lossPercentage = (loss / initialStockPrice.value) * 100;
+const calculateLoss = function (costPrice, sellingPrice) {
+  const loss = costPrice - sellingPrice;
+  const lossPercentage = (loss / costPrice) * 100;
   return [loss, lossPercentage];
 };
 
